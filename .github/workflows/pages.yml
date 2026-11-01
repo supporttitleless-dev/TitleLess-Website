@@ -1,4 +1,5 @@
-# Publishes this site to GitHub Pages, at https://droidboy08-hub.github.io/.
+# Publishes this site to GitHub Pages from supporttitleless-dev/TitleLess-Website,
+# for titlelessbrowser.com.
 #
 # Only the site's own pages go out: tools/ and DESIGN.md are for working on
 # the site, not part of it, and hidden files (this workflow, .gitignore) stay
@@ -7,9 +8,11 @@
 # are stamped with a hash of their contents, so a changed file arrives under a
 # new address instead of from a visitor's cache.
 #
-# titlelessbrowser.com moves here once its DNS points at GitHub. Set it then
-# in the repository's Pages settings: a workflow deployment ignores a CNAME
-# file. The github.io address then forwards to it, so links to it keep working.
+# The domain is set in the repository's Pages settings, not by a CNAME file,
+# which a workflow deployment ignores. Every link on the site starts from /,
+# so the site needs the domain: at the project address
+# supporttitleless-dev.github.io/TitleLess-Website/ its styles and links miss.
+# The old copy at droidboy08-hub.github.io stays up for the links in TitleLess 1.2.
 name: Publish
 
 on:
